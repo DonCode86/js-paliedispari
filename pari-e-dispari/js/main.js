@@ -4,20 +4,26 @@
 // Sommiamo i due numeri
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
-
 function isEven(num) {
     if (num % 2 === 0) {
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
 
 function randomNumbers(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// const oddOrEvenUserInput = prompt("Scegli pari o dispari!");
-// const userNumber = Number(prompt("scegli un numero da 1 a 5"));
+const oddOrEvenUserInput = prompt("Scegli pari o dispari!");
+const userNumber = Number(prompt("scegli un numero da 1 a 5"));
 const computerNumber = randomNumbers(1, 5);
-console.log = (computerNumber)
+console.log("il numero generato dal pc e': ", computerNumber)
+const sum = computerNumber + userNumber
+if (isEven(sum)) {
+    console.log(sum);
+    console.log("Spiacente,hai perso!")
+} else {
+    console.log(sum);
+    console.log("Congratualazioni, hai vinto!")
+}
