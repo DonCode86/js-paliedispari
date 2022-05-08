@@ -16,3 +16,6 @@ const parolaUtente = prompt("inserisci una parola e ti dirò se è palindroma!!!
 
 const checkStringa = checkPalindrome(parolaUtente);
 console.log(checkStringa)
+
+"anna"
+"cascas"
