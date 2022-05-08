@@ -16,14 +16,18 @@ function randomNumbers(min, max) {
 }
 
 const oddOrEvenUserInput = prompt("Scegli pari o dispari!");
+
 const userNumber = Number(prompt("scegli un numero da 1 a 5"));
 const computerNumber = randomNumbers(1, 5);
 console.log("il numero generato dal pc e': ", computerNumber)
 const sum = computerNumber + userNumber
-if (isEven(sum)) {
-    console.log(sum);
-    console.log("Spiacente,hai perso!")
-} else {
+if (isEven(sum) == true && oddOrEvenUserInput == "pari") {
     console.log(sum);
     console.log("Congratualazioni, hai vinto!")
+} else if (isEven(sum) == false && oddOrEvenUserInput == "dispari") {
+    console.log(sum);
+    console.log("Congratualazioni, hai vinto!")
+} else {
+    console.log(sum);
+    console.log("Spiacente,hai perso!")
 }
